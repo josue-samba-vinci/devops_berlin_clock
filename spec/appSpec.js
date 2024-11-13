@@ -38,4 +38,13 @@ describe("Berlin Clock - Simple Minutes", function() {
         
         expect(result).toEqual("YYYY");
       });
+
+      it("should work the same for minutes greater than 4 for minutes greater ", function () {
+        expect(main.simpleMinutes(5)).toEqual("OOOO"); 
+        expect(main.simpleMinutes(6)).toEqual("YOOO"); 
+        expect(main.simpleMinutes(7)).toEqual("YYOO"); 
+        expect(main.simpleMinutes(8)).toEqual("YYYO"); 
+        expect(main.simpleMinutes(9)).toEqual("YYYY"); 
+      });
+
     });
