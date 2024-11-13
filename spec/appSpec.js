@@ -31,4 +31,11 @@ describe("Berlin Clock - Simple Minutes", function() {
         
         expect(result).toEqual("YYYO");
       });
+
+    it("should activate a light if the minutes are equal to 4", function () {
+
+        const result = main.simpleMinutes(4);
+        
+        expect(result).toEqual("YYYY");
+      });
     });
