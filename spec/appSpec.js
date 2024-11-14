@@ -120,4 +120,11 @@ describe("One Hour", function () {
 
         expect(result).toEqual("RROO");
     });
+
+    it("should turn on the first lamp when hour is 3", function () {
+
+        const result = main.singleHours(3);
+
+        expect(result).toEqual("RRRO");
+    });
   });
