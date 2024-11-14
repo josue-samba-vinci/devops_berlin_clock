@@ -41,7 +41,7 @@ describe("Simple Minutes", function() {
         expect(result).toEqual("YYYY");
       });
 
-      it("should work the same for minutes greater than 4 for minutes greater ", function () {
+      it("should work the same for minutes greater than 4", function () {
         expect(main.simpleMinutes(5)).toEqual("OOOO"); 
         expect(main.simpleMinutes(6)).toEqual("YOOO"); 
         expect(main.simpleMinutes(7)).toEqual("YYOO"); 
@@ -131,7 +131,15 @@ describe("One Hour", function () {
     it("should turn on the first lamp when hour is 4", function () {
       
         const result = main.singleHours(4);
-        
+
         expect(result).toEqual("RRRR");
+    });
+    
+    it("should work the same for hours greater than 4", function () {
+        expect(main.singleHours(10)).toEqual("OOOO");
+        expect(main.singleHours(16)).toEqual("ROOO");
+        expect(main.singleHours(19)).toEqual("RRRR");
+        expect(main.singleHours(22)).toEqual("RROO");
+        expect(main.singleHours(23)).toEqual("RRRO");
     });
   });
