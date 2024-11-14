@@ -231,5 +231,11 @@ describe("Seconds", function () {
 
         expect(result).toEqual("Y");
     });
-    
+
+    it ("should have the lamp turned off when second is 57 (odd)", function () {
+
+        const result = main.seconds(57);
+
+        expect(result).toEqual("O");
+    });
 });
