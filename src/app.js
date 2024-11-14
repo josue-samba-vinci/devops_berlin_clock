@@ -41,10 +41,7 @@ export class Main{
       }
 
       berlinClock(hours, minutes, seconds) {
-
-        if (hours === 0 && minutes === 0 && seconds === 0) return "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO";
-
-        if (hours === 3 && minutes === 40 && seconds === 43) return "O\nOOOO\nRRRO\nYYRYYRYY000\nYYYO";
+          return this.seconds(seconds) + "\n" + this.fiveHours(hours) + "\n" + this.singleHours(hours) + "\n" + this.fiveMinutes(minutes) + "\n" + this.simpleMinutes(minutes);              
       }
       
   }

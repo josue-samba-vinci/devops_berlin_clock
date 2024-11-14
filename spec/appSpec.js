@@ -247,7 +247,7 @@ describe("Full Clock", function() {
       const minutes = 0;
       const seconds = 0;
     
-      const result = main.berlinClock(0, 0, 0);
+      const result = main.berlinClock(hours, minutes, seconds);
 
       expect(result).toEqual("Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
       
@@ -259,9 +259,9 @@ describe("Full Clock", function() {
       const minutes = 40;
       const seconds = 43;
     
-      const result = main.berlinClock(3, 40, 43);
+      const result = main.berlinClock(hours, minutes, seconds);
 
-      expect(result).toEqual("O\nOOOO\nRRRO\nYYRYYRYY000\nYYYO");
+      expect(result).toEqual("O\nOOOO\nRRRO\nYYRYYRYYOOO\nOOOO");
       
       console.log("\ntest for 03:40:43 :\n"+main.berlinClock(hours, minutes, seconds));
     });
