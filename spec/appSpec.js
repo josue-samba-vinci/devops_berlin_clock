@@ -197,17 +197,24 @@ describe("One Hour", function () {
 
 describe("Seconds", function () {
 
-    it ("should have the lamp turned on when seconds are even", function () {
+    it ("should have the lamp turned on when second is 0 (even)", function () {
 
         const result = main.seconds(0);
 
         expect(result).toEqual("Y");
     });
 
-    it ("should have the lamp turned off when seconds are odd", function () {
+    it ("should have the lamp turned off when second is 1 (odd)", function () {
 
         const result = main.seconds(1);
 
         expect(result).toEqual("O");
+    });
+
+    it ("should have the lamp turned on when second is 2 (even)", function () {
+
+        const result = main.seconds(2);
+
+        expect(result).toEqual("Y");
     });
 });
