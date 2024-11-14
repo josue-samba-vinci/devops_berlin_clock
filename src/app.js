@@ -30,20 +30,8 @@ export class Main{
 
       fiveHours(hours) {
 
-        if (hours === 0) return "OOOO";
+        const onLamps = Math.floor(hours / 5);
 
-        if (hours === 5) return "ROOO";
-
-        if (hours === 8) return "ROOO";
-
-        if (hours === 10) return "RROO";
-
-        if (hours === 15) return "RRRO";
-
-        if (hours === 20) return "RRRR";
-
-        if (hours === 23) return "RRRR";
-        
-        return "OOOO";
+        return "R".repeat(onLamps) + "O".repeat(4 - onLamps);
       }
 }
