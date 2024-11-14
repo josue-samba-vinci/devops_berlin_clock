@@ -100,7 +100,7 @@ describe("Five Minutes", function () {
 
 describe("One Hour", function () {
 
-    it("should turn off all lamps when hour is 0", function () {
+    it("should have all lamps turned off when hour is 0", function () {
 
         const result = main.singleHours(0);
 
@@ -142,4 +142,10 @@ describe("One Hour", function () {
         expect(main.singleHours(22)).toEqual("RROO");
         expect(main.singleHours(23)).toEqual("RRRO");
     });
+
+    it("should have all lamps turned off when hour is 0", function(){
+        const result = main.fiveHours(0);
+
+        expect(result).toEqual("OOOO");
+    })
   });
