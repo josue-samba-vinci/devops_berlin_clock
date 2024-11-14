@@ -251,7 +251,19 @@ describe("Full Clock", function() {
 
       expect(result).toEqual("Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
       
-      console.log(main.berlinClock(hours, minutes, seconds));
+      console.log("\ntest for 00:00:00 :\n"+main.berlinClock(hours, minutes, seconds));
+    });
+
+    it("should display 03:40:43", function() {
+      const hours = 3;
+      const minutes = 40;
+      const seconds = 43;
+    
+      const result = main.berlinClock(3, 40, 43);
+
+      expect(result).toEqual("O\nOOOO\nRRRO\nYYRYYRYY000\nYYYO");
+      
+      console.log("\ntest for 03:40:43 :\n"+main.berlinClock(hours, minutes, seconds));
     });
 
 });
