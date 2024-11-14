@@ -47,4 +47,14 @@ describe("Berlin Clock - Simple Minutes", function() {
         expect(main.simpleMinutes(9)).toEqual("YYYY"); 
       });
 
+      describe("Five Minutes", function () {
+
+        it("should turn off all lamps when minutes are 0", function () {
+
+            const result = main.fiveMinutes(0);
+
+            expect(result).toEqual("OOOOOOOOOOO");
+        });
+        });
+
     });

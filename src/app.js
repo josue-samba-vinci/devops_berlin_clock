@@ -6,4 +6,9 @@ export class Main{
 
         return "Y".repeat(onLamps) + "O".repeat(4 - onLamps);
     }
+
+    fiveMinutes(minutes) {
+       
+        return "OOOOOOOOOOO";
+      }
 }
