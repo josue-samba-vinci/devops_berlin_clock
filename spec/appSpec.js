@@ -143,6 +143,8 @@ describe("One Hour", function () {
         expect(main.singleHours(23)).toEqual("RRRO");
     });
 
+    describe("Five Hours", function () {
+
     it("should have all lamps turned off when hour is 0", function(){
 
         const result = main.fiveHours(0);
@@ -189,7 +191,16 @@ describe("One Hour", function () {
 
         const result = main.fiveHours(23);
 
-        expect(result).toEqual("RRRR");
-    })
-
+        expect(result).toEqual("RRRR");})
   });
+});
+
+describe("Seconds", function () {
+
+    it ("should have the lamp turned on when seconds are even", function () {
+
+        const result = main.seconds(0);
+        
+        expect(result).toEqual("Y");
+    });
+});
