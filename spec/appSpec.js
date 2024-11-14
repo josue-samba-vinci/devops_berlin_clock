@@ -224,4 +224,12 @@ describe("Seconds", function () {
 
         expect(result).toEqual("O");
     });
+
+    it ("should have the lamp turned on when second is 32 (even)", function () {
+
+        const result = main.seconds(32);
+
+        expect(result).toEqual("Y");
+    });
+    
 });

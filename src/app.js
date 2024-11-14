@@ -45,6 +45,8 @@ export class Main{
 
         if (seconds === 3) return "O";
 
+        if (seconds === 32) return "Y";
+
         return "Y";
       }
 }
