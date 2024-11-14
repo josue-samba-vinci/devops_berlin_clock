@@ -88,4 +88,12 @@ describe("Five Minutes", function () {
       expect(result).toEqual("YYRYYRYYROO");
 
     });
+
+    it("it should turn on all lamps when minutes are 55", function () {
+
+      const result = main.fiveMinutes(55);
+
+      expect(result).toEqual("YYRYYRYYRYY");
+
+    });
 });
