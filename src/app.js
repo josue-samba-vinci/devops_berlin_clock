@@ -37,18 +37,6 @@ export class Main{
 
       seconds(seconds) {
 
-        if (seconds === 0) return "Y";
-
-        if (seconds === 1) return "O";
-
-        if (seconds === 2) return "Y";
-
-        if (seconds === 3) return "O";
-
-        if (seconds === 32) return "Y";
-
-        if (seconds === 57) return "O";
-
-        return "Y";
+        return seconds % 2 === 0 ? "Y" : "O";
       }
 }
