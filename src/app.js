@@ -20,4 +20,9 @@ export class Main{
         }
         return lamps;
       }
+
+      singleHours(hours) {
+        
+        return "OOOO";
+      }
 }

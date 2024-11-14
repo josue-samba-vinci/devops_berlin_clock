@@ -2,7 +2,7 @@ import { Main } from '../src/app.js';
 
 const main = new Main();
 
-describe("Berlin Clock - Simple Minutes", function() {
+describe("Simple Minutes", function() {
     
 
     it("should activate a light if the minutes are equal to 0", function () {
@@ -97,3 +97,13 @@ describe("Five Minutes", function () {
 
     });
 });
+
+describe("One Hour", function () {
+
+    it("should turn off all lamps when hour is 0", function () {
+
+        const result = main.singleHours(0);
+
+        expect(result).toEqual("OOOO");
+    });
+  });
