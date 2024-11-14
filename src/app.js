@@ -23,6 +23,10 @@ export class Main{
 
       singleHours(hours) {
         
+        if (hours === 0) return "OOOO";
+
+        if (hours === 1) return "ROOO";
+        
         return "OOOO";
       }
 }

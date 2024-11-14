@@ -106,4 +106,11 @@ describe("One Hour", function () {
 
         expect(result).toEqual("OOOO");
     });
+
+    it("should turn on the first lamp when hour is 1", function () {
+
+        const result = main.singleHours(1);
+
+        expect(result).toEqual("ROOO");
+    });
   });
