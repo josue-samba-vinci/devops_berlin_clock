@@ -39,6 +39,8 @@ export class Main{
         if (hours === 10) return "RROO";
 
         if (hours === 15) return "RRRO";
+
+        if (hours === 20) return "RRRR";
         
         return "OOOO";
       }
