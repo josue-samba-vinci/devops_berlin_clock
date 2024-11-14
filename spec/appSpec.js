@@ -70,5 +70,12 @@ describe("Berlin Clock - Simple Minutes", function() {
             expect(result).toEqual("YYOOOOOOOOO");
         });
 
+        it("it should turn on the first three lamps when minutes are 15", function () {
+
+            const result = main.fiveMinutes(15);
+
+            expect(result).toEqual("YYROOOOOOOO");
+        });
+
     });
   });
