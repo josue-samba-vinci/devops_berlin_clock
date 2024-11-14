@@ -30,6 +30,8 @@ export class Main{
         if (hours === 2) return "RROO";
 
         if (hours === 3) return "RRRO";
+
+        if (hours === 4) return "RRRR";
         
         return "OOOO";
       }

@@ -127,4 +127,11 @@ describe("One Hour", function () {
 
         expect(result).toEqual("RRRO");
     });
+
+    it("should turn on the first lamp when hour is 4", function () {
+      
+        const result = main.singleHours(4);
+        
+        expect(result).toEqual("RRRR");
+    });
   });
