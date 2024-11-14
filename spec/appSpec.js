@@ -1,7 +1,9 @@
 import { Main } from '../src/app.js';
 
+const main = new Main();
+
 describe("Berlin Clock - Simple Minutes", function() {
-    const main = new Main();
+    
 
     it("should activate a light if the minutes are equal to 0", function () {
 
@@ -46,36 +48,44 @@ describe("Berlin Clock - Simple Minutes", function() {
         expect(main.simpleMinutes(8)).toEqual("YYYO"); 
         expect(main.simpleMinutes(9)).toEqual("YYYY"); 
       });
+  });
 
-      describe("Five Minutes", function () {
 
-        it("should turn off all lamps when minutes are 0", function () {
+describe("Five Minutes", function () {
 
-            const result = main.fiveMinutes(0);
+    it("should turn off all lamps when minutes are 0", function () {
 
-            expect(result).toEqual("OOOOOOOOOOO");
-        });
+        const result = main.fiveMinutes(0);
 
-        it("it should turn on the first lamp when minutes are 5", function () {
+        expect(result).toEqual("OOOOOOOOOOO");
+    });
 
-            const result = main.fiveMinutes(5);
+    it("it should turn on the first lamp when minutes are 5", function () {
 
-            expect(result).toEqual("YOOOOOOOOOO");
-        });
+        const result = main.fiveMinutes(5);
 
-        it("it should turn on the first two lamps when minutes are 10", function () {
+        expect(result).toEqual("YOOOOOOOOOO");
+    });
 
-            const result = main.fiveMinutes(10);
+    it("it should turn on the first two lamps when minutes are 10", function () {
 
-            expect(result).toEqual("YYOOOOOOOOO");
-        });
+        const result = main.fiveMinutes(10);
 
-        it("it should turn on the first three lamps when minutes are 15", function () {
+        expect(result).toEqual("YYOOOOOOOOO");
+    });
 
-            const result = main.fiveMinutes(15);
+    it("it should turn on the first three lamps when minutes are 15", function () {
 
-            expect(result).toEqual("YYROOOOOOOO");
-        });
+        const result = main.fiveMinutes(15);
+
+        expect(result).toEqual("YYROOOOOOOO");
+    });
+
+    it("it should turn on the first nine lamps when minutes are 45", function () {
+
+      const result = main.fiveMinutes(45);
+
+      expect(result).toEqual("YYRYYRYYROO");
 
     });
-  });
+});
