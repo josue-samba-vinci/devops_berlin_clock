@@ -144,8 +144,18 @@ describe("One Hour", function () {
     });
 
     it("should have all lamps turned off when hour is 0", function(){
+
         const result = main.fiveHours(0);
 
         expect(result).toEqual("OOOO");
     })
+
+    it("should have one lamp turned on when hour is 5", function(){
+
+        const result = main.fiveHours(5);
+
+        expect(result).toEqual("ROOO");
+    })
+
+
   });
