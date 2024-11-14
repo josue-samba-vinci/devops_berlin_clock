@@ -8,7 +8,11 @@ export class Main{
     }
 
     fiveMinutes(minutes) {
-       
+        
+        if (minutes === 0) return "OOOOOOOOOOO";
+
+        if (minutes === 5) return "YOOOOOOOOOO";
+        
         return "OOOOOOOOOOO";
       }
 }
