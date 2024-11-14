@@ -171,5 +171,12 @@ describe("One Hour", function () {
         expect(result).toEqual("RROO");
     })
 
+    it("should have three lamps turned on when hour is 15", function(){
+
+        const result = main.fiveHours(15);
+
+        expect(result).toEqual("RRRO");
+    })
+
 
   });
