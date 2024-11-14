@@ -200,7 +200,14 @@ describe("Seconds", function () {
     it ("should have the lamp turned on when seconds are even", function () {
 
         const result = main.seconds(0);
-        
+
         expect(result).toEqual("Y");
+    });
+
+    it ("should have the lamp turned off when seconds are odd", function () {
+
+        const result = main.seconds(1);
+
+        expect(result).toEqual("O");
     });
 });
