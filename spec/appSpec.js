@@ -239,3 +239,20 @@ describe("Seconds", function () {
         expect(result).toEqual("O");
     });
 });
+
+describe("Full Clock", function() {
+
+    it("should display midnight (00:00:00)", function() {
+      const hours = 0;
+      const minutes = 0;
+      const seconds = 0;
+    
+      const result = main.berlinClock(0, 0, 0);
+
+      expect(result).toEqual("Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
+      
+      console.log(main.berlinClock(hours, minutes, seconds));
+    });
+
+});
+
