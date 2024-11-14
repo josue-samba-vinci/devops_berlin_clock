@@ -9,18 +9,15 @@ export class Main{
 
     fiveMinutes(minutes) {
         
-        if (minutes === 0) return "OOOOOOOOOOO";
-
-        if (minutes === 5) return "YOOOOOOOOOO";
-
-        if (minutes === 10) return "YYOOOOOOOOO";
-
-        if (minutes === 15) return "YYROOOOOOOO";
-
-        if (minutes === 45) return "YYRYYRYYROO";
-        
-        if (minutes === 55) return "YYRYYRYYRYY";
-
-        return "OOOOOOOOOOO";
+        const onLamps = Math.floor(minutes / 5);
+        let lamps = "";
+        for (let i = 1; i <= 11; i++) {
+          if (i <= onLamps) {
+            lamps += (i % 3 === 0) ? "R" : "Y";
+          } else {
+            lamps += "O";
+          }
+        }
+        return lamps;
       }
 }
